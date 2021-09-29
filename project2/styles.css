@@ -1,10 +1,18 @@
 body {
-    color: white;
+
     background-color: #0f0f0f;
     background-image: url("images/background.png");
     background-repeat: repeat;
+}
 
-    width: 800px;
+.main {
+    color: white;
+
+    background-color: #0f0f0f;
+    /* background-image: url("images/background.png");
+    background-repeat: repeat; */
+
+    width: 50%;
     height: 100%;
     margin: auto;
 
@@ -32,6 +40,9 @@ img {
     margin: auto;
 
     border: 2px solid gray;
+
+    max-width: 100%;
+    height: auto;
 }
 
 details {
@@ -41,6 +52,18 @@ details {
 footer {
     margin: auto;
     padding: 4px;
+}
+
+button {
+    padding: 8px;
+    margin: auto;
+    /* color: white; */
+    /* background-color: darkgray;
+    border: 1px solid gray; */
+}
+
+table {
+    width: 100%;
 }
 
 a:link {
@@ -53,7 +76,14 @@ a:hover {
     color:white;
 }
 
-.test {
+.statement {
+    max-width: 600px;
+    border: 1px solid gray;
+    padding: 4px 4px 4px 4px;
+    text-align: left;
+}
+
+#company {
     margin: auto;
     padding:0%;
 }
