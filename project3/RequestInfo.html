@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- These get the roboto font we use from Google servers -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<head>
+	<meta charset="utf-8" />
+	<title>The Stonks</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+			<a href="Banking.html">Home page</a>
+			<a href="Stocks.html">Stock page</a>
+			<a href="Account.html">Account</a>
+			<a href="LoanShark.html">Loan Shark page</a>
+			<a href="RequestInfo.html">Request Info</a>
+		</nav>
+
+        <p>
+            <h1>Requst Info</h1>
+            To request info about our services, fill out the form below and
+            we'll get back to you when we feel like it.
+        </p>
+
+        <form action="http://examples.funwebdev.com/process.php" method="POST">
+            First name : <input type="text" id="fname" name="fname"><br>
+            Last name : <input type="text" id="lname" name="lname"><br>
+            Email : <input type="email" id="email" name="email"><br>
+            Networth : <input type="number" id="networth" name="networth"><br>
+            
+            <label for="contact">How would you like to be contacted?</label>
+            <select id="contact" name="contact">
+                <optgroup>
+                    <option value="1">Email me</option>
+                    <option value="2">Send a riddle via mail</option>
+                    <option value="3">Steal my IP info and track me down</option>
+                </optgroup>
+            </select><br>
+
+            <input type="checkbox" id="narc" name="narc" value="checked">
+            <label for="narc">I am not a narc</label><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset">
+        </form>
+    </div>
+</body>
