@@ -55,9 +55,39 @@ footer {
 button {
     padding: 8px;
     margin: auto;
-    /* color: white; */
-    /* background-color: darkgray;
-    border: 1px solid gray; */
+}
+
+.inputElement {
+    width: 75%;
+    display:block;
+}
+
+.inputElement:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+input, select {
+    float: right;
+    clear: both;
+
+    text-align: right;
+}
+
+select {
+    width: auto;
+}
+
+.formSubmit {
+    text-align: center;
+}
+
+.formSubmit input {
+    text-align: center;
+    float: none;
+    clear: none;
+    width: auto;
 }
 
 table {
@@ -76,9 +106,37 @@ a:hover {
 
 .statement {
     max-width: 600px;
-    border: 1px solid gray;
-    padding: 4px 4px 4px 4px;
     text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid gray;
+}
+
+td, th {
+    border: 1px solid #2f2f2f;
+    padding: 4px 6px 4px;
+}
+
+th {
+    font-style: bold;
+}
+
+tr:nth-child(even) td {
+    background-color: #0c0c0c;
+}
+
+tr:hover td {
+    background-color: #3b3b3b;
+}
+
+caption {
+    caption-side: bottom;
+    padding-top: 4px;
+
+    font-family: serif;
+    font-style: bold;
 }
 
 #company {

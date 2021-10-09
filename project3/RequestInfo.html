@@ -7,47 +7,66 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 <head>
-	<meta charset="utf-8" />
-	<title>The Stonks</title>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <title>The Stonks</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div class="main">
         <nav>
-			<a href="Banking.html">Home page</a>
-			<a href="Stocks.html">Stock page</a>
-			<a href="Account.html">Account</a>
-			<a href="LoanShark.html">Loan Shark page</a>
-			<a href="RequestInfo.html">Request Info</a>
-		</nav>
+            <a href="Banking.html">Home page</a>
+            <a href="Stocks.html">Stock page</a>
+            <a href="Account.html">Account</a>
+            <a href="LoanShark.html">Loan Shark page</a>
+            <a href="RequestInfo.html">Request Info</a>
+        </nav>
 
         <p>
-            <h1>Requst Info</h1>
-            To request info about our services, fill out the form below and
-            we'll get back to you when we feel like it.
+        <h1>Requst Info</h1>
+        To request info about our services, fill out the form below and
+        we'll get back to you when we feel like it.
         </p>
 
         <form action="http://examples.funwebdev.com/process.php" method="POST">
-            First name : <input type="text" id="fname" name="fname"><br>
-            Last name : <input type="text" id="lname" name="lname"><br>
-            Email : <input type="email" id="email" name="email"><br>
-            Networth : <input type="number" id="networth" name="networth"><br>
-            
-            <label for="contact">How would you like to be contacted?</label>
-            <select id="contact" name="contact">
-                <optgroup>
-                    <option value="1">Email me</option>
-                    <option value="2">Send a riddle via mail</option>
-                    <option value="3">Steal my IP info and track me down</option>
-                </optgroup>
-            </select><br>
+            <div class="inputElement">
+                <label for="fname">First name : </label>
+                <input type="text" id="fname" name="fname">
+            </div>
+            <div class="inputElement">
+                <label for="lname">Last name : </label>
+                <input type="text" id="lname" name="lname">
+            </div>
+            <div class="inputElement">
+                <label for="email">Email : </label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="inputElement">
+                <label for="networth">Networth : </label>
+                <input type="number" id="networth" name="networth">
+            </div>
 
-            <input type="checkbox" id="narc" name="narc" value="checked">
-            <label for="narc">I am not a narc</label><br>
+            <div class="inputElement">
+                <label for="contact">How would you like to be contacted?</label>
+                <select id="contact" name="contact">
+                    <optgroup>
+                        <option value="1">Email me</option>
+                        <option value="2">Send a riddle via mail</option>
+                        <option value="3">Steal my IP info and track me down</option>
+                    </optgroup>
+                </select>
+            </div>
 
-            <input type="submit" value="Submit">
-            <input type="reset">
+            <div class="inputElement">
+                <label for="narc">I am not a narc</label>
+                <input type="checkbox" id="narc" name="narc" value="checked">
+            </div>
+
+            <br>
+            <div class="formSubmit">
+                <input type="submit" value="Submit">
+                <input type="reset">
+            </div>
         </form>
     </div>
 </body>
