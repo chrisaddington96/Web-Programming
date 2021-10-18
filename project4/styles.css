@@ -1,0 +1,153 @@
+body {
+
+    background-color: #0f0f0f;
+    background-image: url("images/background.png");
+    background-repeat: repeat;
+}
+
+.main {
+    color: white;
+
+    background-color: #0f0f0f;
+
+    width: 50%;
+    height: 100%;
+    margin: auto;
+
+    border: 1px solid gray;
+    padding: 8px 16px 8px 16px;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    width: fit-content;
+    padding: 2px 12px;
+    border: 1px solid white;
+
+    margin-bottom: 8px;
+
+    font-size: 220%;
+    font-family: 'Roboto', sans-serif;
+
+    box-shadow: 0px 0px 2px 2px white;
+}
+
+img {
+    display: block;
+    margin: auto;
+
+    border: 2px solid gray;
+
+    max-width: 100%;
+    height: auto;
+}
+
+details {
+    padding-left: 24px;
+}
+
+footer {
+    margin: auto;
+    padding: 4px;
+}
+
+button {
+    padding: 8px;
+    margin: auto;
+}
+
+.inputElement {
+    width: 75%;
+    display:block;
+}
+
+.inputElement:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+input, select {
+    float: right;
+    clear: both;
+
+    text-align: right;
+}
+
+select {
+    width: auto;
+}
+
+.formSubmit {
+    text-align: center;
+}
+
+.formSubmit input {
+    text-align: center;
+    float: none;
+    clear: none;
+    width: auto;
+}
+
+table {
+    width: 100%;
+}
+
+a:link {
+    color:lightskyblue;
+}
+a:visited {
+    color:lightblue;
+}
+a:hover {
+    color:white;
+}
+
+.statement {
+    max-width: 600px;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid gray;
+}
+
+td, th {
+    border: 1px solid #2f2f2f;
+    padding: 4px 6px 4px;
+}
+
+th {
+    font-style: bold;
+}
+
+tr:nth-child(even) td {
+    background-color: #0c0c0c;
+}
+
+tr:hover td {
+    background-color: #3b3b3b;
+}
+
+caption {
+    caption-side: bottom;
+    padding-top: 4px;
+
+    font-family: serif;
+    font-style: bold;
+}
+
+.container {
+    column-count: 3;
+}
+
+#company {
+    margin: auto;
+    padding:0%;
+}
+
+#companySlogan {
+    font-style: italic;
+}
