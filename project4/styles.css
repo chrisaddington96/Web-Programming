@@ -64,6 +64,44 @@ img {
     height: auto;
 }
 
+img.enlarged {
+    width: 1200px;
+    height: 350px;
+}
+
+figure {
+    padding: 20px;
+    width: 500px;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+figcaption.popup {
+    padding: 20px;
+    background: black;
+    box-shadow: gray;
+    position: absolute;
+    visibility: hidden;
+}
+
+figure.thumbnail:hover figcaption.popup {
+    visibility: visible;
+    top: -100px;
+    left: 100px;
+    position: absolute;
+}
+
+p.popup {
+    text-align: center;
+    color: White;
+    font-size: larger;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    
+}
+
 details {
     padding-left: 24px;
 }
