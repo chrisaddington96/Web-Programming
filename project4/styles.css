@@ -16,6 +16,7 @@ body {
     margin: auto;
 }
 
+
 .main {
     flex-grow: 3;
     color: white;
@@ -39,6 +40,39 @@ body {
     width: 15%;
     height:100%;
 }
+
+.left-bar {
+    max-width: 100%;
+    flex-grow: 1;
+    width: 15%;
+    height:100%;
+    opacity: 25%;
+
+    transition-property: opacity;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+}
+
+.left-bar:hover {
+    background-image: url("images/sharkdark.png");
+    background-repeat: space;
+    opacity: 75%;
+}
+
+.left-bar:hover a:link {
+    color: white;
+    opacity: 100%;
+}
+
+.left-bar:hover a:visited {
+    color: red;
+}
+
+.left-bar:hover a:hover {
+    color:pink;
+}
+
 
 h1 {
     width: fit-content;
