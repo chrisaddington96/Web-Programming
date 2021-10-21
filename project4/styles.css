@@ -7,8 +7,9 @@ body {
 
 .main-container {
     display: flex;
-    flex-flow: row wrap;
-    align-content: stretch;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
 
     justify-content: center;
 
@@ -18,7 +19,9 @@ body {
 
 
 .main {
-    flex-grow: 3;
+    flex-basis: 100%;
+    min-width: 70%;
+
     color: white;
 
     background-color: #161b22;
@@ -35,10 +38,8 @@ body {
 }
 
 .side-bar {
-    max-width: 100%;
-    flex-grow: 1;
-    width: 15%;
-    height:100%;
+    flex-basis: 100%;
+    min-width: 172px;
 }
 
 .left-bar {
@@ -52,6 +53,13 @@ body {
     transition-duration: 2s;
     transition-timing-function: ease-in;
     transition-delay: 0s;
+}
+
+@media screen and (min-width:968px) {
+    .main-container {
+        flex-wrap: nowrap;
+        width: 70%;
+    }
 }
 
 .left-bar p {
