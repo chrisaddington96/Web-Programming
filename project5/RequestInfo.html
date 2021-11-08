@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- These get the roboto font we use from Google servers -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<head>
+    <meta charset="utf-8" />
+    <title>The Stonks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<div class="main-container">
+		<div class="main side-bar left-bar">
+			<nav>
+				<b>Navigation</b><br>
+				<a href="Home.html">Home page</a><br>
+				<a href="Stocks.html">Stock page</a><br>
+				<a href="Account.html">Account</a><br>
+				<a href="LoanShark.html">Loan Shark page</a><br>
+				<a href="RequestInfo.html">Request Info</a><br> 
+				<p>You better pay on time</p>
+			</nav>
+        </div>
+
+        <div class="main">
+        <p>
+        <h1>Request Info</h1>
+        To request info about our services, fill out the form below and
+        we'll get back to you when we feel like it.
+        </p>
+
+        <form action="http://examples.funwebdev.com/process.php" method="POST">
+            <div class="inputElement">
+                <label for="fname">First name : </label>
+                <input type="text" id="fname" name="fname">
+            </div>
+            <div class="inputElement">
+                <label for="lname">Last name : </label>
+                <input type="text" id="lname" name="lname">
+            </div>
+            <div class="inputElement">
+                <label for="email">Email : </label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="inputElement">
+                <label for="networth">Networth : </label>
+                <input type="number" id="networth" name="networth">
+            </div>
+
+            <div class="inputElement">
+                <label for="contact">How would you like to be contacted?</label>
+                <select id="contact" name="contact">
+                    <optgroup>
+                        <option value="1">Email me</option>
+                        <option value="2">Send a riddle via mail</option>
+                        <option value="3">Steal my IP info and track me down</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="inputElement">
+                <label for="narc">I am not a narc</label>
+                <input type="checkbox" id="narc" name="narc" value="checked">
+            </div>
+
+            <br>
+            <div class="formSubmit">
+                <input type="submit" value="Submit">
+                <input type="reset">
+            </div>
+        </form>
+    </div>
+
+        <div class="main side-bar">
+			<b>Offers</b><br><br>
+			<a href="">Free Cash Back on Illicit Activities!</a><br><br>
+			<a href="">Buying a home? 200% APR Loans Available!</a><br>
+		</div>
+    </div>
+</body>
