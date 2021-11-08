@@ -47,14 +47,17 @@
                 <label for="fname">First name : </label>
                 <input type="text" id="fname" name="fname">
             </div>
+
             <div class="inputElement">
                 <label for="lname">Last name : </label>
                 <input type="text" id="lname" name="lname">
             </div>
+
             <div class="inputElement">
                 <label for="email">Email : </label>
                 <input type="email" id="email" name="email">
             </div>
+
             <div class="inputElement">
                 <label for="networth">Networth : </label>
                 <input type="number" id="networth" name="networth">
@@ -62,11 +65,13 @@
 
             <div class="inputElement">
                 <label for="contact">How would you like to be contacted?</label>
-                <select id="contact" name="contact">
+                <select id="contact" name="contact" onchange="dynamicAdd(this);">
                     <optgroup>
-                        <option value="1">Email me</option>
-                        <option value="2">Send a riddle via mail</option>
-                        <option value="3">Steal my IP info and track me down</option>
+                        <option value="0" id="default"></option>
+                        <option value="1" id="email" >Email me</option>
+                        <option value="2" id="mail" >Send a riddle via mail</option>
+                        <option value="3" id="ip" >Steal my IP info and track me down</option>
+                        <div id="container"></div>
                     </optgroup>
                 </select>
             </div>
@@ -91,3 +96,23 @@
 		</div>
     </div>
 </body>
+<script>
+    window.dynamicAdd = function(e){
+        const currValue = e.value;
+        if(currValue == "email"){
+             // Get the container to add the text field
+            var container = document.getElementById("container");
+            // Clear the container
+            while(container.hasChildNodes()){
+                conatiner.removeChild(container.lastChild);
+            }
+            // Add text input for email
+            container.appendChild(document.createTextNode("Email : "));
+            var input = document.createElement("input");
+            input.type = "text";
+            input.name = "email"
+            container.appendChild(input);
+            container.appendChile(document.createElement("br"));
+        }
+    }
+</script>
