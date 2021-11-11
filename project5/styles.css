@@ -1,29 +1,26 @@
 :root{
-    --dark-color: #0d1117;
-    --light-color: white;
-    --blue-color: lightblue;
-    --red-color: crimson;
-
-    --default-txt: white;
-    --dark-text: #0d1117;
+    --background: #161b22;
+    --background2: #0d1117;
+    --brdr: #30363d;
+    --txt: #ffffff;
+    --bartxt: #ff6347;
 }
 
 body {
-
-    background-color: #0d1117;
+    background-color: var(--background2);
     background-image: url("images/background.png");
     background-repeat: repeat;
 }
 
 .btn-group .button {
-    background-color: #0d1117;
-    border: 1px white;
+    background-color: var(--background2);
+    border: 1px var(--brdr);
     padding: 8px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 10px;
-    color: white;
+    color: var(--txt);
     cursor: pointer;
     float: left;
 }
@@ -53,94 +50,15 @@ body {
     flex-basis: 100%;
     min-width: 70%;
 
-    color: white;
+    color: var(--txt);
 
-    background-color: #161b22;
-
-    margin: 4px;
-
-    height: 100%;
-
-    border: 1px solid #30363d;
-    border-radius: 6px;
-    padding: 8px 16px 8px 16px;
-
-    font-family: 'Roboto', sans-serif;
-}
-
-.dark-theme{
-    flex-basis: 100%;
-    min-width: 70%;
-
-    color: var(--default-txt);
-
-    background-color: var(--dark-color);
+    background-color: var(--background);
 
     margin: 4px;
 
     height: 100%;
 
-    border: 1px solid #30363d;
-    border-radius: 6px;
-    padding: 8px 16px 8px 16px;
-
-    font-family: 'Roboto', sans-serif;
-}
-
-
-.light-theme{
-    flex-basis: 100%;
-    min-width: 70%;
-
-    color: var(--dark-text);
-
-    background-color: var(--light-color);
-
-    margin: 4px;
-
-    height: 100%;
-
-    border: 1px solid #30363d;
-    border-radius: 6px;
-    padding: 8px 16px 8px 16px;
-
-    font-family: 'Roboto', sans-serif;
-}
-
-
-.blue-theme{
-    flex-basis: 100%;
-    min-width: 70%;
-
-    color: var(--default-txt);
-
-    background-color: var(--blue-color);
-
-    margin: 4px;
-
-    height: 100%;
-
-    border: 1px solid #30363d;
-    border-radius: 6px;
-    padding: 8px 16px 8px 16px;
-
-    font-family: 'Roboto', sans-serif;
-}
-
-
-.red-theme{
-    flex-basis: 100%;
-    min-width: 70%;
-
-    color: var(--default-txt);
-
-    background-color: var(--red-color);
-
-    margin: 4px;
-
-    height: 100%;
-
-    border: 1px solid #30363d;
+    border: 1px solid var(--brdr);
     border-radius: 6px;
     padding: 8px 16px 8px 16px;
 
@@ -187,7 +105,7 @@ body {
 
 .left-bar:hover p {
     opacity: 100%;
-    color: darkred;
+    color: var(--bartxt);
     font-family: 'Roboto', sans-serif;
 }
 
