@@ -6,6 +6,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+<!-- Scripts for changing the theme and dynamically adding fields on the info form -->
+<script type="text/javascript" src="theme-changer.js"></script>
+
 <head>
 	<meta charset="utf-8" />
 	<title>The Bank</title>
@@ -16,11 +19,11 @@
 
 <body>
     <p>
-		<div class="btn-group" id="theme">
-			<button class="button" value="dark-theme">Dark</button>
-			<button class="button" value="light-theme">Light</button>
-			<button class="button" value="blue-theme">Blue</button>
-			<button class="button" value="red-theme">Red</button>
+		<div class="btn-group">
+			<button class="button" value="dark-theme" onclick="changeTheme('dark')">Dark</button>
+			<button class="button" value="light-theme" onclick="changeTheme('light')">Light</button>
+			<button class="button" value="blue-theme" onclick="changeTheme('blue')">Blue</button>
+			<button class="button" value="red-theme" onclick="changeTheme('red')">Red</button>
 		</div>
 		<p style="clear:both"></p>
 	</p>
