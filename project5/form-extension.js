@@ -9,17 +9,17 @@ function dynamicAdd(){
     while(newEntry.hasChildNodes()){
         newEntry.removeChild(newEntry.lastChild);
     }
-    var newEntry = document.getElementById("newEntry2");
-    while(newEntry.hasChildNodes()){
-        newEntry.removeChild(newEntry.lastChild);
+    var newEntry2 = document.getElementById("newEntry2");
+    while(newEntry2.hasChildNodes()){
+        newEntry2.removeChild(newEntry.lastChild);
     }
-    var newEntry = document.getElementById("newEntry3");
-    while(newEntry.hasChildNodes()){
-        newEntry.removeChild(newEntry.lastChild);
+    var newEntry3 = document.getElementById("newEntry3");
+    while(newEntry3.hasChildNodes()){
+        newEntry3.removeChild(newEntry.lastChild);
     }
-    var newEntry = document.getElementById("newEntry4");
-    while(newEntry.hasChildNodes()){
-        newEntry.removeChild(newEntry.lastChild);
+    var newEntry4 = document.getElementById("newEntry4");
+    while(newEntry4.hasChildNodes()){
+        newEntry4.removeChild(newEntry.lastChild);
     }
 
     // If user chooses email, add in email entry
@@ -42,32 +42,32 @@ function dynamicAdd(){
         newEntry.appendChild(input);
 
         // Get div for second entry for country
-        newEntry = document.getElementById("newEntry2");
-        newEntry.appendChild(document.createTextNode("Country: "));
+        newEntry2 = document.getElementById("newEntry2");
+        newEntry2.appendChild(document.createTextNode("Country: "));
         var input2 = document.createElement("input");
         input2.type = "text";
         input2.id = "country";
         input2.name = "country";
-        newEntry.appendChild(input2);
+        newEntry2.appendChild(input2);
 
         // Get div for third entry for state(2 characters)
-        newEntry = document.getElementById("newEntry3");
-        newEntry.appendChild(document.createTextNode("State: "));
+        newEntry3 = document.getElementById("newEntry3");
+        newEntry3.appendChild(document.createTextNode("State: "));
         var input3 = document.createElement("input");
         input3.type = "text";
         input3.id = "state";
         input3.name = "state";
         input3.maxLength = "2";
-        newEntry.appendChild(input3);
+        newEntry3.appendChild(input3);
 
         // Get div for fourth entry for zip code
-        newEntry = document.getElementById("newEntry4");
-        newEntry.appendChild(document.createTextNode("Zip Code: "));
+        newEntry4 = document.getElementById("newEntry4");
+        newEntry4.appendChild(document.createTextNode("Zip Code: "));
         var input4 = document.createElement("input");
         input4.type = "text";
         input4.id = "zipcode";
         input4.name = "zipcode";
-        newEntry.appendChild(input4);
+        newEntry4.appendChild(input4);
     }
     else if(choice == 3){
         newEntry.appendChild(document.createTextNode("Good luck hiding from us"));
