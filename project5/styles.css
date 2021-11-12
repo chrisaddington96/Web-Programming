@@ -275,3 +275,7 @@ caption {
 #companySlogan {
     font-style: italic;
 }
+
+#rich {
+    display: none;
+}

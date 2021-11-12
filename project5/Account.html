@@ -11,6 +11,16 @@
 <!-- Scripts for changing the theme and dynamically adding fields on the info form -->
 <script type="text/javascript" src="theme-changer.js"></script>
 
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#slide").click(function(){
+			$("#rich").slideDown("slow");
+		});
+	});
+</script>
+
 <head>
 	<meta charset="utf-8" />
 	<title>The Stonks</title>
@@ -107,7 +117,11 @@
 		<div class="main side-bar">
 			<b>Offers</b><br><br>
 			<a href="">Free Cash Back on Illicit Activities!</a><br><br>
-			<a href="">Buying a home? 200% APR Loans Available!</a><br>
+			<a href="">Buying a home? 200% APR Loans Available!</a><br><br>
+			<div id="slide">Click here for something fun!</div>
+			<div id="rich">
+				<img src="images/rich.gif" alt="We're rich">
+			</div>
 		</div>
 	</div>
 </body>
