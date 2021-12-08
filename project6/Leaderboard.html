@@ -68,31 +68,43 @@
             </form>
 
             <script>
+                // Leaderboard search function, calls our PHP search and fills entries in the leaderboard table
                 function leaderboardSearch() {
-                    // (A) GET SEARCH TERM
+                    // Form data, contains our search term
                     var data = new FormData();
                     data.append("search", document.getElementById("search").value);
-                    data.append("ajax", 1);
 
-                    // (B) AJAX SEARCH REQUEST
+                    // Fetch JSON using our PHP search script
                     fetch("leaderboard-search.php", { method: "POST", body: data })
                         .then(res => res.json()).then((results) => {
+                            // Get our table body element for our leaderboard
                             var wrapper = document.getElementById("results");
-                            if (results.length > 0) {
-                                wrapper.innerHTML = "";
-                                for (let res of results) {
 
+                            // If there are any results...
+                            if (results.length > 0) {
+                                // Clear the current body
+                                wrapper.innerHTML = "";
+
+                                // Then for each JSON entry...
+                                for (let result of results) {
+                                    // Create a new row
                                     var row = wrapper.insertRow();
 
+                                    // Create cells for our first & last name and net worth
                                     var firstName = row.insertCell();
                                     var lastName = row.insertCell();
                                     var netWorth = row.insertCell();
 
-                                    firstName.innerHTML = res[0];
-                                    lastName.innerHTML = res[1];
-                                    netWorth.innerHTML = res[2];
+                                    // Set the values of each cell
+                                    firstName.innerHTML = result[0];
+                                    lastName.innerHTML = result[1];
+                                    netWorth.innerHTML = result[2];
                                 }
-                            } else { wrapper.innerHTML = "No results found"; }
+                            // If there are no results...
+                            } else { 
+                                // Just print no results found
+                                wrapper.innerHTML = "No results found"; 
+                            }
                         });
                     
                     return false;
