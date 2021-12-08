@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!-- These get the roboto font we use from Google servers -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Scripts for changing the theme and dynamically adding fields on the info form -->
+<script type="text/javascript" src="theme-changer.js"></script>
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#slide").click(function () {
+            $("#rich").slideDown("slow");
+        });
+    });
+</script>
+
+<head>
+    <meta charset="utf-8" />
+    <title>The Stonks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <p>
+    <div class="btn-group">
+        <button class="button" value="dark-theme" onclick="changeTheme('dark')">Dark</button>
+        <button class="button" value="light-theme" onclick="changeTheme('light')">Light</button>
+        <button class="button" value="blue-theme" onclick="changeTheme('blue')">Blue</button>
+        <button class="button" value="red-theme" onclick="changeTheme('red')">Red</button>
+    </div>
+    <p style="clear:both"></p>
+    </p>
+    <div class="main-container">
+        <div class="main side-bar left-bar">
+            <nav>
+                <b>Navigation</b><br>
+                <a href="index.html">Home page</a><br>
+                <a href="Stocks.html">Stock page</a><br>
+                <a href="Account.html">Account</a><br>
+                <a href="LoanShark.html">Loan Shark page</a><br>
+                <a href="RequestInfo.html">Request Info</a><br>
+                <a href="Leaderboard.html">Leaderboard</a><br>
+                <p>You better pay on time</p>
+            </nav>
+        </div>
+
+        <div class="main">
+            <h1>Leaderboard</h1>
+
+            <h2>Search Leaderboard</h2>
+            <form method="POST" action="">
+                <div class="inputElement">
+                    <label for="search">Last Name : </label>
+                    <input type="text" name="search" required />
+                </div>
+
+                <br>
+                <div class="formSubmit">
+                    <input type="submit" value="Search" />
+                </div>
+            </form>
+
+            <h2>Top Scammers</h2>
+            <div class="statement">
+                <table>
+                    <caption>Net worth evaluation is accredited by the Better Scammers Bureau</caption>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Net Worth</th>
+                    </tr>
+                    <?php require("leaderboardtable.php"); ?>
+                </table>
+            </div>
+            <br><br>
+
+            <footer>
+                Authors: Chris Addington and William Yates<br>
+                <a href="mailto:chris.r.addington@gmail.com">chris.r.addington@gmail.com</a><br>
+                <a href="mailto:killowatt2213@gmail.com">killowatt2213@gmail.com</a><br>
+            </footer>
+        </div>
+
+        <div class="main side-bar">
+            <b>Offers</b><br><br>
+            <a href="">Free Cash Back on Illicit Activities!</a><br><br>
+            <a href="">Buying a home? 200% APR Loans Available!</a><br><br>
+            <div id="slide">Click here for something fun!</div>
+            <div id="rich">
+                <img src="images/rich.gif" alt="We're rich">
+            </div>
+        </div>
+    </div>
+</body>
