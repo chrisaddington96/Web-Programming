@@ -55,10 +55,10 @@
             <h1>Leaderboard</h1>
 
             <h2>Search Leaderboard</h2>
-            <form method="POST" action="">
+            <form onsubmit="return leaderboardSearch();">
                 <div class="inputElement">
                     <label for="search">Last Name : </label>
-                    <input type="text" name="search" required />
+                    <input type="text" id="search" />
                 </div>
 
                 <br>
@@ -66,6 +66,38 @@
                     <input type="submit" value="Search" />
                 </div>
             </form>
+
+            <script>
+                function leaderboardSearch() {
+                    // (A) GET SEARCH TERM
+                    var data = new FormData();
+                    data.append("search", document.getElementById("search").value);
+                    data.append("ajax", 1);
+
+                    // (B) AJAX SEARCH REQUEST
+                    fetch("leaderboard-search.php", { method: "POST", body: data })
+                        .then(res => res.json()).then((results) => {
+                            var wrapper = document.getElementById("results");
+                            if (results.length > 0) {
+                                wrapper.innerHTML = "";
+                                for (let res of results) {
+
+                                    var row = wrapper.insertRow();
+
+                                    var firstName = row.insertCell();
+                                    var lastName = row.insertCell();
+                                    var netWorth = row.insertCell();
+
+                                    firstName.innerHTML = res[0];
+                                    lastName.innerHTML = res[1];
+                                    netWorth.innerHTML = res[2];
+                                }
+                            } else { wrapper.innerHTML = "No results found"; }
+                        });
+                    
+                    return false;
+                }
+            </script>
 
             <h2>Top Scammers</h2>
             <div class="statement">
@@ -76,7 +108,10 @@
                         <th>Last Name</th>
                         <th>Net Worth</th>
                     </tr>
-                    <?php require("leaderboardtable.php"); ?>
+
+                    <tbody id="results">
+                        <script> leaderboardSearch(); </script>
+                    </tbody>
                 </table>
             </div>
             <br><br>
